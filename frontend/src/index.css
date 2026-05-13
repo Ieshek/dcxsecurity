@@ -191,3 +191,49 @@ h1, h2, h3, h4, h5, h6 {
     background-clip: text;
     color: transparent;
 }
+
+@keyframes splash-fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes splash-scale-x {
+    0% {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+@keyframes splash-fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes splash-loadbar {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+.splash-root {
+    animation: splash-hide 4.6s ease-in-out forwards !important;
+}
+
+@keyframes splash-blink {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+@keyframes splash-hide {
+    0% { opacity: 0; pointer-events: auto; }
+    8% { opacity: 1; pointer-events: auto; }
+    82% { opacity: 1; pointer-events: auto; }
+    100% { opacity: 0; pointer-events: none; visibility: hidden; }
+}
+.splash-anim {
+    animation-fill-mode: both !important;
+}

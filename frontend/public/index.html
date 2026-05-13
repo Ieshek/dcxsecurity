@@ -6,14 +6,6 @@
         <meta name="theme-color" content="#000000" />
         <meta name="description" content="DCX Security Systems Agra — Premium home, office and commercial security: alarms, fire sensors, CCTV, perimeter protection, 24x7 support." />
         <meta name="keywords" content="security systems in Agra, home security systems, fire alarm installation, security consultancy, CCTV and alarm systems, DCX Security" />
-        <meta property="og:title" content="DCX Security Systems | Premium Security Solutions in Agra" />
-        <meta property="og:description" content="DCX Security Systems Agra — Premium home, office and commercial security: alarms, fire sensors, CCTV, perimeter protection, 24x7 support." />
-        <meta property="og:type" content="business.business" />
-        <meta property="og:image" content="https://i.postimg.cc/Cx6gkfMJ/Whats-App-Image-2026-05-06-at-22-27-48.jpg/logo.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="DCX Security Systems | Premium Security Solutions in Agra" />
-        <meta name="twitter:description" content="DCX Security Systems Agra — Premium home, office and commercial security." />
-        <link rel="icon" type="image/png" href="https://i.postimg.cc/Cx6gkfMJ/Whats-App-Image-2026-05-06-at-22-27-48.jpg/logo.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet" />
@@ -31,30 +23,260 @@
         Learn how to configure a non-root public URL by running `npm run build`.
         -->
         <title>DCX Security Systems | Premium Security Solutions in Agra</title>
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org/",
-          "@type": "LocalBusiness",
-          "name": "DCX Security Systems",
-          "image": "https://i.postimg.cc/Cx6gkfMJ/Whats-App-Image-2026-05-06-at-22-27-48.jpg/logo.png",
-          "description": "Premium home, office and commercial security systems in Agra",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Agra",
-            "addressLocality": "Agra",
-            "addressRegion": "Uttar Pradesh",
-            "addressCountry": "IN"
-          },
-          "url": "%PUBLIC_URL%",
-          "telephone": "+91",
-          "areaServed": "Agra"
-        }
-        </script>
         <script>window.addEventListener("error",function(e){if(e.error instanceof DOMException&&e.error.name==="DataCloneError"&&e.message&&e.message.includes("PerformanceServerTiming")){e.stopImmediatePropagation();e.preventDefault()}},true);</script>
         <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
     </head>
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
+        <!-- DCX Cinematic Splash (vanilla, plays once per tab session) -->
+        <style>
+            #dcx-splash {
+                position: fixed;
+                inset: 0;
+                z-index: 9999;
+                background: radial-gradient(ellipse at 50% 50%, #0a1422 0%, #050505 70%, #000 100%);
+                color: #fff;
+                font-family: "Outfit", "Inter", system-ui, sans-serif;
+                overflow: hidden;
+                animation: dcx-splash-out 0.8s ease-in 3.6s forwards;
+            }
+            #dcx-splash.hidden { display: none; }
+            #dcx-splash .grid {
+                position: absolute; inset: 0; opacity: .18;
+                background-image:
+                  linear-gradient(rgba(0,194,255,0.5) 1px, transparent 1px),
+                  linear-gradient(90deg, rgba(0,194,255,0.5) 1px, transparent 1px);
+                background-size: 60px 60px;
+                -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+                mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+            }
+            #dcx-splash .glow {
+                position: absolute; left: 50%; top: 50%;
+                width: 640px; height: 640px; transform: translate(-50%,-50%);
+                border-radius: 50%;
+                background: radial-gradient(circle, rgba(0,194,255,0.28) 0%, rgba(0,194,255,0.08) 35%, transparent 70%);
+                filter: blur(24px);
+                animation: dcx-glow-pulse 2.4s ease-in-out infinite;
+            }
+            #dcx-splash .scan {
+                position: absolute; left: 0; right: 0; height: 2px;
+                background: linear-gradient(90deg, transparent 0%, rgba(0,194,255,0.85) 50%, transparent 100%);
+                box-shadow: 0 0 24px #00C2FF;
+                animation: dcx-scan 3s linear infinite;
+            }
+            #dcx-splash .stack {
+                position: absolute; inset: 0;
+                display: flex; flex-direction: column; align-items: center; justify-content: center;
+                text-align: center; padding: 0 24px;
+            }
+            #dcx-splash .logo {
+                width: 192px; height: 192px;
+                display: grid; place-items: center;
+                animation: dcx-logo-in 1s cubic-bezier(0.16,1,0.3,1) both, dcx-logo-float 3.2s ease-in-out 1s infinite;
+                position: relative;
+            }
+            #dcx-splash .logo img {
+                width: 100%; height: 100%; object-fit: contain;
+                filter: invert(1) brightness(1.05)
+                  drop-shadow(0 0 22px rgba(0,194,255,0.85))
+                  drop-shadow(0 0 48px rgba(0,194,255,0.55));
+            }
+            #dcx-splash .ring {
+                position: absolute; left: 50%; top: 50%;
+                width: 240px; height: 240px; transform: translate(-50%,-50%) scale(0.4);
+                border: 1px solid rgba(0,194,255,0.3); border-radius: 50%;
+                opacity: 0;
+                animation: dcx-ring 2.4s ease-out infinite;
+            }
+            #dcx-splash .ring:nth-child(2) { animation-delay: 0.6s; }
+            #dcx-splash .ring:nth-child(3) { animation-delay: 1.2s; }
+            #dcx-splash h1 {
+                margin: 40px 0 0; font-size: clamp(28px, 6vw, 64px);
+                font-weight: 800; letter-spacing: 0.18em; color: #fff;
+                text-shadow: 0 0 12px rgba(0,194,255,0.55), 0 0 32px rgba(0,194,255,0.35), 0 0 60px rgba(0,194,255,0.25);
+                animation: dcx-fade-up 0.7s cubic-bezier(0.16,1,0.3,1) 1.1s both;
+            }
+            #dcx-splash .ul {
+                margin-top: 16px; height: 1px; width: 180px;
+                background: linear-gradient(90deg, transparent, #00C2FF, transparent);
+                box-shadow: 0 0 12px #00C2FF;
+                transform: scaleX(0);
+                animation: dcx-line 0.6s ease-out 1.5s both;
+            }
+            #dcx-splash .tagline {
+                margin-top: 20px;
+                font-size: clamp(12px, 1.4vw, 18px);
+                letter-spacing: 0.22em; text-transform: uppercase;
+                color: rgba(204, 250, 255, 0.85);
+                text-shadow: 0 0 10px rgba(0,194,255,0.4);
+                font-family: "Inter", system-ui, sans-serif;
+                font-weight: 500;
+                animation: dcx-fade-up 0.7s ease-out 1.7s both;
+            }
+            #dcx-splash .pill {
+                position: absolute; top: 24px; left: 50%; transform: translateX(-50%);
+                display: inline-flex; align-items: center; gap: 10px;
+                padding: 6px 14px; border-radius: 999px;
+                border: 1px solid rgba(0,194,255,0.3);
+                background: rgba(0,194,255,0.05);
+                backdrop-filter: blur(8px);
+                font-family: "JetBrains Mono", monospace;
+                font-size: 10px; letter-spacing: 0.32em; color: #7de7ff;
+                animation: dcx-fade-up 0.6s ease-out 0.4s both;
+            }
+            #dcx-splash .pill::before {
+                content: ""; width: 6px; height: 6px; border-radius: 50%;
+                background: #00C2FF; box-shadow: 0 0 10px #00C2FF;
+                animation: dcx-blink 1.4s ease-in-out infinite;
+            }
+            #dcx-splash .bottom {
+                position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);
+                font-family: "JetBrains Mono", monospace;
+                font-size: 10px; letter-spacing: 0.3em; color: rgba(0,194,255,0.4);
+                text-transform: uppercase;
+                animation: dcx-fade-up 0.6s ease-out 0.6s both;
+            }
+            #dcx-splash .corner {
+                position: absolute; width: 56px; height: 56px;
+                opacity: 0; animation: dcx-corner 0.5s ease-out forwards;
+            }
+            #dcx-splash .corner::before, #dcx-splash .corner::after {
+                content: ""; position: absolute; background: #00C2FF;
+                box-shadow: 0 0 10px #00C2FF;
+            }
+            #dcx-splash .corner::before { top: 0; left: 0; width: 24px; height: 2px; }
+            #dcx-splash .corner::after { top: 0; left: 0; width: 2px; height: 24px; }
+            #dcx-splash .corner.tl { top: 24px; left: 24px; animation-delay: 0.3s; }
+            #dcx-splash .corner.tr { top: 24px; right: 24px; transform: rotate(90deg); animation-delay: 0.4s; }
+            #dcx-splash .corner.br { bottom: 24px; right: 24px; transform: rotate(180deg); animation-delay: 0.5s; }
+            #dcx-splash .corner.bl { bottom: 24px; left: 24px; transform: rotate(270deg); animation-delay: 0.6s; }
+            #dcx-splash .loader {
+                margin-top: 40px; width: 320px; max-width: 80vw;
+                animation: dcx-fade-up 0.5s ease-out 2s both;
+            }
+            #dcx-splash .bar {
+                height: 3px; width: 100%;
+                background: rgba(255,255,255,0.06);
+                border: 1px solid rgba(0,194,255,0.15);
+                border-radius: 999px; overflow: hidden;
+            }
+            #dcx-splash .bar i {
+                display: block; height: 100%; width: 0%;
+                background: linear-gradient(90deg, rgba(0,194,255,0.3), #00C2FF, #66E5FF);
+                box-shadow: 0 0 14px #00C2FF;
+                animation: dcx-loadbar 1.6s ease-in-out 2s forwards;
+            }
+            #dcx-splash .meta {
+                margin-top: 12px; display: flex; justify-content: space-between;
+                font-family: "JetBrains Mono", monospace;
+                font-size: 10px; letter-spacing: 0.3em;
+                color: rgba(125, 231, 255, 0.7); text-transform: uppercase;
+                font-weight: 700;
+            }
+            #dcx-splash .meta .blink { animation: dcx-blink 1.2s ease-in-out infinite; }
+
+            @keyframes dcx-splash-out {
+                0% { opacity: 1; pointer-events: auto; }
+                100% { opacity: 0; pointer-events: none; visibility: hidden; }
+            }
+            @keyframes dcx-logo-in {
+                0% { opacity: 0; transform: scale(0.4); }
+                100% { opacity: 1; transform: scale(1); }
+            }
+            @keyframes dcx-logo-float {
+                0%,100% { transform: translateY(0); }
+                50% { transform: translateY(-6px); }
+            }
+            @keyframes dcx-glow-pulse {
+                0%,100% { opacity: 0.55; }
+                50% { opacity: 1; }
+            }
+            @keyframes dcx-ring {
+                0% { transform: translate(-50%,-50%) scale(0.4); opacity: 0; }
+                40% { opacity: 0.6; }
+                100% { transform: translate(-50%,-50%) scale(1.8); opacity: 0; }
+            }
+            @keyframes dcx-scan {
+                0% { top: -2%; }
+                100% { top: 102%; }
+            }
+            @keyframes dcx-fade-up {
+                0% { opacity: 0; transform: translateY(14px); }
+                100% { opacity: 1; transform: translateY(0); }
+            }
+            @keyframes dcx-line {
+                0% { opacity: 0; transform: scaleX(0); }
+                100% { opacity: 1; transform: scaleX(1); }
+            }
+            @keyframes dcx-blink {
+                0%,100% { opacity: 0.3; }
+                50% { opacity: 1; }
+            }
+            @keyframes dcx-loadbar {
+                0% { width: 0%; }
+                100% { width: 100%; }
+            }
+            @keyframes dcx-corner {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+        </style>
+        <div id="dcx-splash">
+            <div class="grid"></div>
+            <div class="scan"></div>
+            <div class="glow"></div>
+            <div class="corner tl"></div>
+            <div class="corner tr"></div>
+            <div class="corner bl"></div>
+            <div class="corner br"></div>
+            <div class="pill">SECURE CHANNEL · INITIALIZING</div>
+            <div class="bottom">DCX · Threat Intelligence Platform · v1.0</div>
+            <div class="stack">
+                <div class="logo">
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <img src="https://customer-assets.emergentagent.com/job_dcx-security-preview/artifacts/0x1lf6je_WhatsApp%20Image%202026-05-06%20at%2022.27.48%20%281%29.jpeg" alt="DCX Security Wizards" />
+                </div>
+                <h1>SECURITY WIZARDS</h1>
+                <div class="ul"></div>
+                <div class="tagline">Here Security Never Sleeps</div>
+                <div class="loader">
+                    <div class="bar"><i></i></div>
+                    <div class="meta"><span>Authenticating</span><span class="blink">Establishing secure link…</span></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            (function(){
+                var splash = document.getElementById("dcx-splash");
+                if (!splash) return;
+                var startTime = Date.now();
+                var debugLabel = document.createElement("div");
+                debugLabel.style.cssText = "position:fixed;top:8px;left:8px;color:#ff0;font:bold 16px monospace;z-index:10000;background:#000;padding:4px 8px;border:1px solid #f00;";
+                splash.appendChild(debugLabel);
+                var tick = function(){
+                    var elapsed = Date.now() - startTime;
+                    debugLabel.textContent = "T+" + elapsed + "ms";
+                    if (elapsed < 8000) requestAnimationFrame(tick);
+                };
+                requestAnimationFrame(tick);
+                // Fully remove from DOM after fade-out completes
+                setTimeout(function(){
+                    debugLabel.textContent = "REMOVING " + (Date.now() - startTime);
+                    if (splash && splash.parentNode) splash.parentNode.removeChild(splash);
+                }, 4600);
+                // Allow click-to-skip
+                splash.addEventListener("click", function(){
+                    splash.style.animation = "none";
+                    splash.style.transition = "opacity 0.4s ease";
+                    splash.style.opacity = "0";
+                    setTimeout(function(){
+                        if (splash && splash.parentNode) splash.parentNode.removeChild(splash);
+                    }, 450);
+                });
+            })();
+        </script>
         <div id="root"></div>
         <!--
       This HTML file is a template.
@@ -66,7 +288,7 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-        <!-- <a
+        <a
             id="emergent-badge"
             target="_blank"
             href="https://app.emergent.sh/?utm_source=emergent-badge"
@@ -110,7 +332,7 @@
             >
                 Made with Emergent
             </p>
-        </a> -->
+        </a>
         <script>
             !(function (t, e) {
                 var o, n, p, r;
