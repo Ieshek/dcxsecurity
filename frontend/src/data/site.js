@@ -215,10 +215,10 @@ export const SERVICES = [
 ];
 
 export const STATS = [
+  { value: 1500, suffix: "+", label: "Satisfied Clients" },
   { value: 1500, suffix: "+", label: "Installations" },
-  { value: 1000, suffix: "+", label: "Happy Clients" },
   { value: 24, suffix: "x7", label: "Support" },
-  { value: 10, suffix: "+", label: "Security Products" },
+  { value: 20, suffix: "+", label: "Security Products" },
 ];
 
 export const CLIENTS = [
