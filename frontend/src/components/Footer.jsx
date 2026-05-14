@@ -32,8 +32,8 @@ export const Footer = () => {
             offices, shops, villas and industrial spaces across Agra and beyond.
           </p>
           <div className="mt-6 flex gap-2.5">
-            <SocialIcon Icon={Facebook} href="#" label="Facebook" testid="social-facebook" />
-            <SocialIcon Icon={Instagram} href="#" label="Instagram" testid="social-instagram" />
+            <SocialIcon Icon={Facebook} href="https://www.facebook.com/DCSWIZARDS?rdid=8WKpjArpI8JS0VPe&share_url=https%253A%252F%252Fwww.facebook.com%252Fshare%252F18CqbKX6kx%252F%253Fref%253D1#" label="Facebook" testid="social-facebook" />
+            <SocialIcon Icon={Instagram} href="https://www.instagram.com/dcxsecuritywizards" label="Instagram" testid="social-instagram" />
             <SocialIcon Icon={Twitter} href="#" label="Twitter" testid="social-twitter" />
             <SocialIcon Icon={Linkedin} href="#" label="LinkedIn" testid="social-linkedin" />
             <SocialIcon Icon={Youtube} href="#" label="YouTube" testid="social-youtube" />

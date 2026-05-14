@@ -27,7 +27,7 @@ export default function Clients() {
               className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight max-w-4xl"
               style={{ fontFamily: "Outfit, sans-serif" }}
             >
-              Trusted by <span className="text-glow-blue">300+</span> homes &amp; businesses across Agra.
+              Trusted by <span className="text-glow-blue">1500+</span> homes &amp; businesses across Agra.
             </h1>
             <p className="mt-5 max-w-2xl text-slate-400 text-lg leading-relaxed">
               From villas in Sikandra to shops in Sanjay Place — our customers stay with

@@ -265,24 +265,24 @@ export const CLIENTS = [
 
 export const INSTALLATIONS = [
   {
-    image: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1200&q=80",
-    title: "Residential Hub Install",
-    location: "Agra",
+    image: "https://i.postimg.cc/3wsfv7rk/Whats-App-Image-2026-05-10-at-22-46-16.jpg",
+    title: "Installed at BharatGas ",
+    
   },
   {
-    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=1200&q=80",
-    title: "Commercial Surveillance",
-    location: "Sikandra",
+    image: "https://i.postimg.cc/hGkZdg4n/Whats-App-Image-2026-05-10-at-22-46-16-(1).jpg",
+    title: "Installed at Marutyi Suzuki Showroom",
+    
   },
   {
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&q=80",
-    title: "Office Network Cabinet",
-    location: "Kamla Nagar",
+    image: "https://i.postimg.cc/wBC4mHxq/Whats-App-Image-2026-05-10-at-22-47-09-(1).jpg",
+    title: "Installed at Stock Holding Corporation Of India Ltd",
+    
   },
   {
-    image: "https://images.unsplash.com/photo-1510511459019-5d64380eb4c2?auto=format&fit=crop&w=1200&q=80",
-    title: "Perimeter Beam Setup",
-    location: "Dayalbagh",
+    image: "https://i.postimg.cc/XvR1C3Np/Whats-App-Image-2026-05-10-at-22-47-09.jpg",
+    title: "Installed at Gramin Bank Of Aryavart",
+    
   },
   {
     image: "https://images.unsplash.com/photo-1614064548237-096f735f344f?auto=format&fit=crop&w=1200&q=80",
