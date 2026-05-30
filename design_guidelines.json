@@ -112,7 +112,7 @@
     "routing": "Create independent pages or a seamless single-page application with scroll spy navigation for Home, About, Products, Services, Installations, Clients, Contact.",
     "layout_details": "Implement a sticky navbar with the DCX logo. Ensure seamless page transitions. Add floating WhatsApp and Call buttons on the bottom right.",
     "sections": {
-      "home": "Include a premium hero with motion effects, statistics counters (1500+ Installations, 300+ Clients, etc.), product highlights, and client testimonials.",
+      "home": "Include a premium hero with motion effects, statistics counters (4500+ Installations, 300+ Clients, etc.), product highlights, and client testimonials.",
       "products": "Display 12 security products (sensors, cameras, hubs) using the defined glassmorphism cards. Include a product image, price/specs, features, and an 'Enquiry' button per card. Use Framer motion hover effects.",
       "services": "Display 6 service cards with an icon and description representing Home Security, Office Security, Commercial Security, Fire Safety & Surveillance.",
       "installations": "Create an image gallery using the installation_gallery placeholder URLs with hover zoom effects.",

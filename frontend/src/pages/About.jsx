@@ -4,6 +4,7 @@ import { Shield, Target, Eye, Award, Users, Wrench, CheckCircle2 } from "lucide-
 import PageWrapper from "../components/PageWrapper";
 import SectionHeader from "../components/SectionHeader";
 import AnimatedCounter from "../components/AnimatedCounter";
+import VideoSection from "../components/VideoSection";
 import { COMPANY, STATS } from "../data/site";
 
 const VALUES = [
@@ -155,6 +156,9 @@ export default function About() {
           </ul>
         </div>
       </section>
+
+      {/* Video Section */}
+      <VideoSection />
     </PageWrapper>
   );
 }

@@ -14,6 +14,7 @@ import Services from "@/pages/Services";
 import Installations from "@/pages/Installations";
 import Clients from "@/pages/Clients";
 import Contact from "@/pages/Contact";
+import GoogleReviews from "@/pages/GoogleReviews";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -27,6 +28,7 @@ function AnimatedRoutes() {
         <Route path="/installations" element={<Installations />} />
         <Route path="/clients" element={<Clients />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/reviews" element={<GoogleReviews />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </AnimatePresence>

@@ -1,8 +1,7 @@
 import React, { useMemo } from "react";
 import { motion } from "framer-motion";
 
-const DCX_LOGO_URL =
-  "https://customer-assets.emergentagent.com/job_dcx-security-preview/artifacts/0x1lf6je_WhatsApp%20Image%202026-05-06%20at%2022.27.48%20%281%29.jpeg";
+const DCX_LOGO_URL = "/dcx-logo-transparent.jpeg";
 
 // Pre-computed particle positions (stable across renders)
 const PARTICLES = Array.from({ length: 36 }).map((_, i) => ({

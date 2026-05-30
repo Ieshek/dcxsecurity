@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Star, MapPin, ChevronLeft, ChevronRight } from "lucide-react";
 import PageWrapper from "../components/PageWrapper";
 import SectionHeader from "../components/SectionHeader";
+import GoogleReviewsCarousel from "../components/GoogleReviewsCarousel";
 import { CLIENTS, COMPANY } from "../data/site";
 
 export default function Clients() {
@@ -27,11 +28,10 @@ export default function Clients() {
               className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight max-w-4xl"
               style={{ fontFamily: "Outfit, sans-serif" }}
             >
-              Trusted by <span className="text-glow-blue">1500+</span> homes &amp; businesses across Agra.
+              Trusted by <span className="text-glow-blue">4500+</span> homes &amp; businesses across India.
             </h1>
             <p className="mt-5 max-w-2xl text-slate-400 text-lg leading-relaxed">
-              From villas in Sikandra to shops in Sanjay Place — our customers stay with
-              us because the systems work and the support shows up.
+              From residential villas to commercial properties, our customers choose DCX Security Wizards because our security systems perform reliably and our support team is always there when needed.
             </p>
           </motion.div>
         </div>
@@ -49,14 +49,9 @@ export default function Clients() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
-                className="relative grid md:grid-cols-[auto_1fr] gap-8 items-center"
+                className="relative grid gap-8 items-center"
                 data-testid="client-slide"
               >
-                <img
-                  src={c.avatar}
-                  alt={c.name}
-                  className="w-24 h-24 lg:w-28 lg:h-28 rounded-full object-cover ring-2 ring-cyan-300/40 mx-auto"
-                />
                 <div>
                   <div className="flex items-center gap-1 text-cyan-300">
                     {Array.from({ length: 5 }).map((_, i) => (
@@ -84,6 +79,7 @@ export default function Clients() {
                 </div>
               </motion.div>
             </AnimatePresence>
+
             <div className="mt-8 flex items-center justify-between relative">
               <div className="flex gap-2">
                 {CLIENTS.map((_, i) => (
@@ -136,15 +132,10 @@ export default function Clients() {
                 className="glass-card rounded-2xl p-6"
                 data-testid={`client-card-${i}`}
               >
-                <img
-                  src={cl.avatar}
-                  alt={cl.name}
-                  className="w-14 h-14 rounded-full object-cover ring-2 ring-cyan-300/30"
-                />
-                <h4 className="mt-4 text-white font-bold" style={{ fontFamily: "Outfit, sans-serif" }}>
+                <h4 className="text-white font-bold" style={{ fontFamily: "Outfit, sans-serif" }}>
                   {cl.name}
                 </h4>
-                <div className="text-xs text-slate-400 flex items-center gap-1 mt-0.5">
+                <div className="text-xs text-slate-400 flex items-center gap-1 mt-1">
                   <MapPin size={11} /> {cl.location}
                 </div>
                 <div className="flex items-center gap-1 text-cyan-300 mt-3">
@@ -166,27 +157,8 @@ export default function Clients() {
         </div>
       </section>
 
-      {/* Map */}
-      <section className="pb-24" data-testid="clients-map-section">
-        <div className="max-w-7xl mx-auto px-5 lg:px-8">
-          <SectionHeader
-            overline="Our Footprint"
-            title="Client locations across Agra"
-            subtitle="A live snapshot of where our protection is deployed."
-          />
-          <div className="rounded-3xl overflow-hidden border border-white/10 shadow-[0_8px_60px_rgba(0,229,255,0.08)] bg-[#0a0d15]">
-            <iframe
-              title="DCX clients map"
-              src={COMPANY.mapsEmbed}
-              width="100%"
-              height="450"
-              style={{ border: 0, filter: "invert(0.92) hue-rotate(180deg)" }}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
-        </div>
-      </section>
+      {/* Google Reviews Showcase */}
+      <GoogleReviewsCarousel />
     </PageWrapper>
   );
 }

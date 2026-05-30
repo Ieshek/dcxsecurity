@@ -26,12 +26,16 @@ export const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-5 lg:px-8 h-16 lg:h-20 flex items-center justify-between">
-        <Link to="/" className="shrink-0" data-testid="navbar-logo-link">
+        <Link
+          to="/"
+          className="shrink-0 w-auto md:w-[260px] lg:w-[320px] transition-opacity hover:opacity-90"
+          data-testid="navbar-logo-link"
+        >
           <Logo />
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-2">
           {NAV_LINKS.map((l) => (
             <NavLink
               key={l.to}
@@ -39,7 +43,7 @@ export const Navbar = () => {
               end={l.to === "/"}
               data-testid={`nav-link-${l.label.toLowerCase()}`}
               className={({ isActive }) =>
-                `relative px-4 py-2 text-sm font-medium transition-colors ${
+                `relative px-3 py-2.5 text-sm font-medium transition-all duration-200 ${
                   isActive
                     ? "text-cyan-300"
                     : "text-slate-300 hover:text-white"
@@ -52,7 +56,7 @@ export const Navbar = () => {
                   {isActive && (
                     <motion.span
                       layoutId="nav-active"
-                      className="absolute left-3 right-3 -bottom-0.5 h-px bg-gradient-to-r from-transparent via-cyan-300 to-transparent"
+                      className="absolute left-2 right-2 -bottom-1 h-0.5 bg-gradient-to-r from-transparent via-cyan-300 to-transparent rounded-full"
                     />
                   )}
                 </>
@@ -61,19 +65,19 @@ export const Navbar = () => {
           ))}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-3">
+        <div className="hidden lg:flex items-center gap-4">
           <a
             href={`tel:${COMPANY.phoneDial}`}
             data-testid="navbar-call-btn"
-            className="btn-primary px-5 py-2.5 rounded-full text-sm font-semibold inline-flex items-center gap-2"
+            className="btn-primary px-6 py-2.5 rounded-full text-sm font-semibold inline-flex items-center gap-2 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/20"
           >
-            <PhoneCall size={15} />
+            <PhoneCall size={16} />
             <span>{COMPANY.phone}</span>
           </a>
         </div>
 
         <button
-          className="lg:hidden text-white p-2"
+          className="lg:hidden text-white p-2 hover:bg-white/5 rounded-lg transition-colors"
           onClick={() => setOpen((v) => !v)}
           data-testid="navbar-mobile-toggle"
           aria-label="Toggle menu"
@@ -92,7 +96,7 @@ export const Navbar = () => {
             className="lg:hidden overflow-hidden bg-[#05070C]/95 backdrop-blur-2xl border-t border-white/5"
             data-testid="navbar-mobile-panel"
           >
-            <div className="px-5 py-4 flex flex-col gap-1">
+            <div className="px-5 py-4 flex flex-col gap-1.5">
               {NAV_LINKS.map((l) => (
                 <NavLink
                   key={l.to}
@@ -101,9 +105,9 @@ export const Navbar = () => {
                   onClick={() => setOpen(false)}
                   data-testid={`mobile-nav-link-${l.label.toLowerCase()}`}
                   className={({ isActive }) =>
-                    `px-3 py-3 rounded-lg text-base font-medium ${
+                    `px-3 py-2.5 rounded-lg text-base font-medium transition-all duration-200 ${
                       isActive
-                        ? "bg-white/5 text-cyan-300"
+                        ? "bg-cyan-300/10 text-cyan-300 border border-cyan-300/20"
                         : "text-slate-200 hover:bg-white/5"
                     }`
                   }
@@ -113,10 +117,10 @@ export const Navbar = () => {
               ))}
               <a
                 href={`tel:${COMPANY.phoneDial}`}
-                className="btn-primary mt-3 px-5 py-3 rounded-full text-sm font-semibold inline-flex items-center justify-center gap-2"
+                className="btn-primary mt-2 px-5 py-2.5 rounded-full text-sm font-semibold inline-flex items-center justify-center gap-2 transition-all duration-200"
                 data-testid="mobile-navbar-call-btn"
               >
-                <PhoneCall size={15} />
+                <PhoneCall size={16} />
                 Call {COMPANY.phone}
               </a>
             </div>

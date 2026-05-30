@@ -6,7 +6,7 @@ import ProductCard from "../components/ProductCard";
 import EnquiryDialog from "../components/EnquiryDialog";
 import { PRODUCTS } from "../data/site";
 
-const CATEGORIES = ["All", "Sensor", "Control", "Fire Safety", "Perimeter", "Emergency"];
+const CATEGORIES = ["All", "Sensor", "Control", "Fire Safety", "Perimeter", "Emergency", "Sirens"];
 
 export default function Products() {
   const [active, setActive] = useState("All");
@@ -32,7 +32,7 @@ export default function Products() {
               Pick exactly the <span className="text-glow-blue">protection</span> you need.
             </h1>
             <p className="mt-5 max-w-2xl text-slate-400 text-lg leading-relaxed">
-              12+ premium security products engineered for homes, offices and commercial
+              20+ premium security products engineered for homes, offices and commercial
               spaces. All include consultation, installation and lifetime support.
             </p>
           </motion.div>

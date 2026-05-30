@@ -1,0 +1,78 @@
+{
+  "success": true,
+  "cached": false,
+  "last_updated": "2026-05-26T22:45:54.819525",
+  "reviews": [
+    {
+      "id": "f6dbe3b9-af96-47a3-97da-1699ad56a39d",
+      "name": "V R",
+      "rating": 5,
+      "review": "Everything is polished and professional. Professional-grade security with a consumer-friendly feel. Highly recommend!",
+      "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocILOBpad1NXNugo0NNacitDn8kA37pz3lls0h0lpHJuaMES_A=w72-h72-p-rp-mo-br100"
+    },
+    {
+      "id": "765bd12d-9971-44f7-a7cf-9763a3ca504d",
+      "name": "Richa Gupta",
+      "rating": 5,
+      "review": "So satisfied with their security products and services too, thanks DCX!",
+      "profile_image": "https://lh3.googleusercontent.com/a-/ALV-UjVLAcSRaJpyFE4U7u14nq4xyzsOZ_5cWZ_cFYKDPEXft0a63Ych=w72-h72-p-rp-mo-br100"
+    },
+    {
+      "id": "8208fa76-029a-4ab8-8d88-b3bed1e06e92",
+      "name": "Bhuvanesh Singh",
+      "rating": 4,
+      "review": "I really needed this product and their security consultant guided me perfectly as per my requirement. Very satisfied with the product and their services.",
+      "profile_image": "https://lh3.googleusercontent.com/a-/ALV-UjV6nR1-K25VLiw4sF_eCntZqt1U2ZYakvIQtCMLueQw9-tuCM20yw=w72-h72-p-rp-mo-br100"
+    },
+    {
+      "id": "8147d0e7-337c-48e0-886d-edef9f078ab8",
+      "name": "Mayank Agrawal",
+      "rating": 5,
+      "review": "Their security products are up to the mark, satisfied my security need. Thanks DCX Security Wizards!",
+      "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocKISWhVjKu749JZub577YDB03CVMMYkfCGnKcONyTydtpylUg=w72-h72-p-rp-mo-br100"
+    },
+    {
+      "id": "8919784c-c85a-4e8e-a7c7-add4c258554f",
+      "name": "Bhavana Agrawal",
+      "rating": 5,
+      "review": "Very accurate system, now we sleep peacefully because digital chowkidar is present inside our showroom. Thanks DC Security for providing us this level of security!",
+      "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocLiDNMVsxRpRSMqUvWtlEPEGZPUhbnuB1ybNdyKxIJxYmga6A=w72-h72-p-rp-mo-br100"
+    },
+    {
+      "id": "cef048fc-1147-4a42-9214-50541cea4602",
+      "name": "Sky Sharma",
+      "rating": 5,
+      "review": "As a shop owner, security is paramount. That's why I turned to DC Security Wizards for their top-notch security system, and I have been thoroughly impressed with the results.",
+      "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJ8r-X2FYtK0fCr4vyNSeRwqF9g8nrLOpD19m74NOY98LBv=w72-h72-p-rp-mo-br100"
+    },
+    {
+      "id": "482cac86-7ba4-4274-843c-d4058684fe57",
+      "name": "Ravi Verma",
+      "rating": 5,
+      "review": "Well equipped technology for security. Thanks to Jindal sir for the excellent guidance and support.",
+      "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocLdFcydxkFaHjSJp3obZ42F1Dyi2easXQkACPl1Ug-cbn2MRw=w72-h72-p-rp-mo-br100"
+    },
+    {
+      "id": "d239625e-adac-48c4-892f-a2bd45a9a23d",
+      "name": "Varsh Nishad",
+      "rating": 5,
+      "review": "Very good products and services. Highly recommend DCX Security Wizards to everyone looking for quality security solutions.",
+      "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocLoIQWzwAFGLR_-2dX5Dtts725WF7hRH_zjAdXViAfS6l9gEw=w72-h72-p-rp-mo-br100"
+    },
+    {
+      "id": "fbf9bc42-2575-469e-b838-89b0b0a67b2a",
+      "name": "Ankit Singh",
+      "rating": 4,
+      "review": "We had such a great experience with Ankit Jindal at DC Security Wizards. They installed the intrusion devices exactly as per our requirement.",
+      "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocK1v_XLcgQFdqRUAUBVat4mJbKOdd7i7s6mD7bb-TssDYBtMg=w72-h72-p-rp-mo-br100"
+    },
+    {
+      "id": "d027e213-efa0-4db5-9244-bcf4fd3beb0d",
+      "name": "Shailesh Sharma",
+      "rating": 5,
+      "review": "They have a vast collection of advanced security devices to protect against theft and fire hazards. Got it installed at my two properties, very happy with their services. Thanks DC Security Wizards!",
+      "profile_image": "https://lh3.googleusercontent.com/a-/ALV-UjVccoJgqU-Um7VNj_h_L5Hot44dbKk8QPlVE21QNnK-VVkfADsRLQ=w72-h72-p-rp-mo-br100"
+    }
+  ],
+  "message": "Fetched 10 fresh reviews from Google Maps"
+}

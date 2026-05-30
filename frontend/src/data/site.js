@@ -4,9 +4,9 @@ export const COMPANY = {
   name: "DCX Security Wizards",
   short: "DCX",
   tagline: "Advanced Security Solutions for Homes, Offices & Businesses",
-  phone: "099717 95961",
-  phoneDial: "+919971795961",
-  whatsapp: "919971795961",
+  phone: ["09971795961", ],
+  phoneDial: ["+919971795961"," , ", "+919899096699"],
+  whatsapp: ["919971795961", ],
   instagram: "dcxsecuritywizards",
   instagramUrl: "https://www.instagram.com/dcxsecuritywizards",
   address:
@@ -29,6 +29,7 @@ const PRODUCT_IMG = {
   panic: "https://i.postimg.cc/FKT8cTJ7/Whats-App-Image-2026-05-06-at-23-13-44.jpg",
   commercialdefender: "https://i.postimg.cc/52B6xCQs/Whats-App-Image-2026-05-06-at-23-25-03.jpg",
   fire: "https://i.postimg.cc/NfKMrThG/Whats-App-Image-2026-05-03-at-21-00-53.jpg",
+  smoke: "https://cdn.postimage.me/2026/05/28/WhatsApp-Image-2026-05-27-at-07.33.30.jpeg",
   glass: "https://i.postimg.cc/HsFL0xdC/Whats-App-Image-2026-05-03-at-21-01-01.jpg",
   curtain: "https://i.postimg.cc/L8f8xp6w/Whats-App-Image-2026-05-03-at-21-01-02.jpg",
   outdoor: "https://i.postimg.cc/hPNG8jcW/Whats-App-Image-2026-05-03-at-21-01-01-(2).jpg",
@@ -36,6 +37,9 @@ const PRODUCT_IMG = {
   beam: "https://i.postimg.cc/RZfZgBZ5/Whats-App-Image-2026-05-03-at-21-01-03.jpg",
   door: "https://i.postimg.cc/28g5d6ms/Whats-App-Image-2026-05-03-at-21-01-02-(1).jpg",
   gas: "https://i.postimg.cc/wBwZJwsy/Whats-App-Image-2026-05-06-at-22-47-26.jpg",
+  outdoor_siren_pro: "https://cdn.postimage.me/2026/05/28/WhatsApp-Image-2026-05-28-at-09.20.55.jpeg",
+  solar_outdoor_siren: "https://cdn.postimage.me/2026/05/28/WhatsApp-Image-2026-05-28-at-09.20.58.jpeg",
+  outdoor_siren_pro100: "https://cdn.postimage.me/2026/05/28/WhatsApp-Image-2026-05-28-at-09.20.56.jpeg",
 };
 
 export const PRODUCTS = [
@@ -110,6 +114,17 @@ export const PRODUCTS = [
     features: ["Smoke + heat", "Loud siren", "Battery backup", "Self test"],
   },
   {
+    id: "Smoke & Temperature Sensor",
+    name: "Smoke & Temperature Sensor",
+    price: "₹11,950",
+    image: PRODUCT_IMG.smoke,
+    category: "Fire Safety",
+    description:
+      "Dual smoke and temperature sensor for comprehensive fire detection in residential and commercial spaces.",
+    features: ["Dual smoke + temp", "Loud siren", "Battery backup", "Self test"],
+
+  },
+  {
     id: "glass-break-sensor",
     name: "Glass Break Sensor",
     price: "₹6,950",
@@ -168,11 +183,38 @@ export const PRODUCTS = [
     name: "Gas Leak Sensor",
     price: "₹12,995",
     image: PRODUCT_IMG.gas,
-    category: "Safety",
+    category: "Sensor",
     description: "Advanced gas leak detection for kitchens and industrial spaces with instant alerts.",
     features: ["Instant alert", "Long battery", "Wireless", "Self diagnostics"],
   },
-  
+  {
+    id: "siren",
+    name: "Outdoor Siren pro",
+    price: "₹12,950",
+    image: PRODUCT_IMG.outdoor_siren_pro,
+    category: "Sirens",
+    description: "High-decibel siren for immediate attention and alerting. with 24x7 support.",
+    features: ["120dB", "Weather proof", "Wireless", "Test function"],
+  },
+  {
+    id: "solar-siren",
+    name: "Solar Outdoor Siren",
+    price: "₹32,950",
+    image: PRODUCT_IMG.solar_outdoor_siren,
+    category: "Sirens",
+    description: "Eco-friendly solar-powered outdoor siren for continuous alerting.",
+    features: ["Solar powered", "Weather proof", "Wireless", "Test function"],
+  },
+  {
+    id: "siren-pro100",
+    name: "Outdoor Siren Pro 100",
+    price: "₹12,950",
+    image: PRODUCT_IMG.outdoor_siren_pro100,
+    category: "Sirens",
+    description: "High-decibel siren for immediate attention and alerting. with 24x7 support.",
+    features: ["120dB", "Weather proof", "Wireless", "Test function"],
+  }
+
 ];
 
 export const SERVICES = [
@@ -215,7 +257,7 @@ export const SERVICES = [
 ];
 
 export const STATS = [
-  { value: 1500, suffix: "+", label: "Satisfied Clients" },
+  { value: 4500, suffix: "+", label: "Satisfied Clients" },
   { value: 24, suffix: "x7", label: "Support" },
   { value: 20, suffix: "+", label: "Security Products" },
 ];
@@ -229,7 +271,7 @@ export const CLIENTS = [
     avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=256&q=80",
     quote:
       "DCX gave us complete peace of mind. The team mapped every corner of our home and installed a system that actually works.",
-    coords: { lat: 27.1767, lng: 78.0081 },
+    // coords: { lat: 27.1767, lng: 78.0081 },
   },
   {
     name: "Amit Verma",
@@ -239,7 +281,7 @@ export const CLIENTS = [
     avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=256&q=80",
     quote:
       "Shutter sensors plus beam protection. Best investment for my shop. Quick install, no fuss.",
-    coords: { lat: 27.2033, lng: 77.9954 },
+    // coords: { lat: 27.2033, lng: 77.9954 },
   },
   {
     name: "Neha Gupta",
@@ -249,7 +291,7 @@ export const CLIENTS = [
     avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=256&q=80",
     quote:
       "Their fire safety consultancy was thorough. They explained every sensor and tested everything in front of us.",
-    coords: { lat: 27.2167, lng: 77.9667 },
+    // coords: { lat: 27.2167, lng: 77.9667 },
   },
   {
     name: "Mohit Jain",
@@ -259,7 +301,7 @@ export const CLIENTS = [
     avatar: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=256&q=80",
     quote:
       "Office is now zoned and monitored end to end. Support team responds within minutes.",
-    coords: { lat: 27.207, lng: 78.0027 },
+    // coords: { lat: 27.207, lng: 78.0027 },
   },
 ];
 
@@ -267,43 +309,77 @@ export const INSTALLATIONS = [
   {
     image: "https://i.postimg.cc/3wsfv7rk/Whats-App-Image-2026-05-10-at-22-46-16.jpg",
     title: "Installed at BharatGas ",
+    location: "Sadabad",
     
   },
   {
     image: "https://i.postimg.cc/hGkZdg4n/Whats-App-Image-2026-05-10-at-22-46-16-(1).jpg",
     title: "Installed at Marutyi Suzuki Showroom",
+    location: "Aligarh",
     
   },
   {
     image: "https://i.postimg.cc/wBC4mHxq/Whats-App-Image-2026-05-10-at-22-47-09-(1).jpg",
     title: "Installed at Stock Holding Corporation Of India Ltd",
+    location: "Agra",
     
   },
   {
     image: "https://i.postimg.cc/XvR1C3Np/Whats-App-Image-2026-05-10-at-22-47-09.jpg",
     title: "Installed at Gramin Bank Of Aryavart",
+    location: "Firozabad",
     
   },
   {
-    image: "https://images.unsplash.com/photo-1614064548237-096f735f344f?auto=format&fit=crop&w=1200&q=80",
-    title: "Outdoor IR Detection",
-    location: "Rambagh",
+    image: "https://cdn.postimage.me/2026/05/28/WhatsApp-Image-2026-05-24-at-23.12.19.jpeg",
+    title: "Installed at Raj Jewellers",
+    location: "Agra",
   },
   {
-    image: "https://images.unsplash.com/photo-1611174743420-3d7df880ce32?auto=format&fit=crop&w=1200&q=80",
-    title: "Touchscreen Defender Hub",
-    location: "Agra Cantt",
+    image: "https://cdn.postimage.me/2026/05/28/WhatsApp-Image-2026-05-24-at-23.16.14.jpeg",
+    title: "Installed at Shree Jewellers",
+    location: "Agra",
   },
   {
-    image: "https://images.unsplash.com/photo-1545167622-3a6ac756afa4?auto=format&fit=crop&w=1200&q=80",
-    title: "Curtain Sensor – Balcony",
-    location: "Tajganj",
+    image: "https://cdn.postimage.me/2026/05/28/WhatsApp-Image-2026-05-24-at-23.23.19.jpeg",
+    title: "Installed at Kisna Jewellers",
+    location: "Agra",
   },
   {
-    image: "https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?auto=format&fit=crop&w=1200&q=80",
-    title: "Glass Break Showroom",
-    location: "Sanjay Place",
+    image: "https://cdn.postimage.me/2026/05/28/WhatsApp-Image-2026-05-24-at-23.24.17.jpeg",
+    title: "Installed at Wadhwa Jewellers",
+    location: "Agra",
   },
+  {
+    image: "https://cdn.postimage.me/2026/05/30/WhatsApp-Image-2026-05-30-at-22.25.53.jpeg",
+    title: "Installed at Hero Honda Showroom",
+    location: "Agra",
+  },
+  {
+    image: "https://cdn.postimage.me/2026/05/30/WhatsApp-Image-2026-05-30-at-22.26.00.jpeg",
+    title: "Installed at TVS Showroom",
+    location: "Aligarh",
+  },
+  {
+    image: "https://cdn.postimage.me/2026/05/30/WhatsApp-Image-2026-05-30-at-22.45.16.jpeg",
+    title: "Installed at Residential Villa", 
+    location: "Meerut",
+  },
+  {
+    image: "https://cdn.postimage.me/2026/05/30/WhatsApp-Image-2026-05-30-at-22.29.33.jpeg",
+    title: "Installed at Ashutosh parashar Jewellers", 
+    location: "Firozabad",
+  },
+  {
+    image: "https://cdn.postimage.me/2026/05/30/WhatsApp-Image-2026-05-30-at-22.42.17.jpeg",
+    title: "Installed at Yashika Diamond Pvt. Ltd. ",
+    location: "Noida",
+  },
+  {
+    image: "https://i.ibb.co/zTQxWCb4/Whats-App-Image-2026-05-30-at-23-12-08.jpg",
+    title: "Installed at Residential mansion ",
+    location: "aligarh",
+  }
 ];
 
 export const FAQS = [
@@ -340,5 +416,6 @@ export const NAV_LINKS = [
   { to: "/services", label: "Services" },
   { to: "/installations", label: "Installations" },
   { to: "/clients", label: "Clients" },
+  { to: "/reviews", label: "Reviews" },
   { to: "/contact", label: "Contact" },
 ];

@@ -16,6 +16,7 @@ import SectionHeader from "../components/SectionHeader";
 import AnimatedCounter from "../components/AnimatedCounter";
 import ProductCard from "../components/ProductCard";
 import EnquiryDialog from "../components/EnquiryDialog";
+import PremiumHero from "../components/PremiumHero";
 import { PRODUCTS, SERVICES, STATS, CLIENTS, FAQS, COMPANY } from "../data/site";
 import {
   Accordion,
@@ -71,47 +72,60 @@ export default function Home() {
   return (
     <PageWrapper testid="home-page">
       {/* HERO */}
-      <section className="relative pt-32 lg:pt-44 pb-20 lg:pb-32 overflow-hidden">
+      <section className="relative pt-20 lg:pt-28 pb-20 lg:pb-32 overflow-hidden">
         <HeroBackground />
-        <div className="max-w-7xl mx-auto px-5 lg:px-8 relative">
+        <div className="max-w-7xl mx-auto w-full px-6 md:px-8 relative flex flex-col items-center text-center">
+          {/* Hero Logo */}
+          <motion.div
+            initial={{ opacity: 0, y: -16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-6 flex justify-center"
+          >
+            <img
+              src="/dcx-logo-white.png"
+              alt="DCX Security Wizards Logo"
+              className="w-[220px] sm:w-[260px] md:w-[320px] lg:w-[360px] h-auto object-contain drop-shadow-[0_0_20px_rgba(0,255,255,0.15)]"
+            />
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="overline inline-flex items-center gap-2 mb-6"
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="uppercase tracking-[0.35em] text-cyan-300 text-sm font-semibold mb-6"
           >
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-cyan-300 animate-pulse" />
-            DCX Security Wizards · Agra
+            Advanced Security Systems
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.05 }}
-            className="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight max-w-5xl"
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="w-full max-w-[1200px] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.1]"
             style={{ fontFamily: "Outfit, sans-serif" }}
           >
-            Advanced Security Solutions for{" "}
-            <span className="text-glow-blue">Homes, Offices &amp; Businesses</span>
+            Advanced Security Solutions for
+            <br />
+            <span className="block text-glow-blue">Homes, Offices &amp; Businesses</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="mt-6 max-w-2xl text-base lg:text-lg text-slate-400 leading-relaxed"
+            transition={{ duration: 0.7, delay: 0.3 }}
+            className="mt-6 max-w-[860px] text-base sm:text-lg lg:text-xl text-slate-400 leading-relaxed"
             data-testid="hero-subheadline"
           >
-            Protect what matters most with intelligent alarm systems, fire sensors,
-             and perimeter security — engineered, installed and supported
-            by experts.
+            <span className="block">Protect what matters most with intelligent alarm systems,</span>
+            <span className="block">fire sensors and perimeter security.</span>
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.25 }}
-            className="mt-10 flex flex-col sm:flex-row gap-3"
+            transition={{ duration: 0.7, delay: 0.4 }}
+            className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 justify-center"
           >
             <Link
               to="/contact"
@@ -130,11 +144,11 @@ export default function Home() {
             </Link>
           </motion.div>
 
-          <div className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl">
-            <PillarIcon Icon={Shield} label="Smart Alarms" delay={0.3} />
-            <PillarIcon Icon={Radar} label="Perimeter" delay={0.4} />
-            <PillarIcon Icon={Flame} label="Fire Safety" delay={0.5} />
-            <PillarIcon Icon={Camera} label="Surveillance" delay={0.6} />
+          <div className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl justify-center">
+            <PillarIcon Icon={Shield} label="Smart Alarms" delay={0.5} />
+            <PillarIcon Icon={Radar} label="Perimeter" delay={0.55} />
+            <PillarIcon Icon={Flame} label="Fire Safety" delay={0.6} />
+            <PillarIcon Icon={Camera} label="Surveillance" delay={0.65} />
           </div>
         </div>
       </section>
@@ -312,7 +326,7 @@ export default function Home() {
           <SectionHeader
             overline="Trusted Voices"
             title="Real people. Real protection."
-            subtitle="Hear from clients across Agra who chose DCX for peace of mind."
+            subtitle="Hear from clients across India who chose DCX for peace of mind."
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {CLIENTS.map((c, i) => (
@@ -325,26 +339,27 @@ export default function Home() {
                 className="glass-card rounded-2xl p-7"
                 data-testid={`testimonial-${i}`}
               >
-                <div className="flex items-center gap-4">
-                  <img
-                    src={c.avatar}
-                    alt={c.name}
-                    className="w-12 h-12 rounded-full object-cover ring-2 ring-cyan-300/30"
-                  />
-                  <div>
-                    <div className="font-bold text-white">{c.name}</div>
-                    <div className="text-xs text-slate-400">{c.location}</div>
+                <div className="flex items-start gap-4">
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <div className="font-bold text-white">{c.name}</div>
+                        <div className="text-xs text-slate-400">{c.location}</div>
+                      </div>
+                      <div className="flex items-center gap-1 text-cyan-300">
+                        <Star size={14} fill="currentColor" />
+                        <span className="text-sm font-semibold">{c.rating}</span>
+                      </div>
+                    </div>
+
+                    <p className="mt-5 text-slate-300 italic leading-relaxed">
+                      &ldquo;{c.quote}&rdquo;
+                    </p>
+
+                    <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-cyan-300">
+                      Service: {c.service}
+                    </div>
                   </div>
-                  <div className="ml-auto flex items-center gap-1 text-cyan-300">
-                    <Star size={14} fill="currentColor" />
-                    <span className="text-sm font-semibold">{c.rating}</span>
-                  </div>
-                </div>
-                <p className="mt-5 text-slate-300 italic leading-relaxed">
-                  &ldquo;{c.quote}&rdquo;
-                </p>
-                <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-cyan-300">
-                  Service: {c.service}
                 </div>
               </motion.div>
             ))}

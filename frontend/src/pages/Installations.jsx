@@ -23,7 +23,7 @@ export default function Installations() {
               Real installs. Real <span className="text-glow-blue">protection</span>.
             </h1>
             <p className="mt-5 max-w-2xl text-slate-400 text-lg leading-relaxed">
-              A snapshot of homes, shops and offices DCX has secured across Agra. Click
+              A snapshot of homes, shops and offices DCX has secured across India. Click
               any image to view in full.
             </p>
           </motion.div>
