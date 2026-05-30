@@ -6,37 +6,28 @@ export default function VideoSection() {
   const containerRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (videoRef.current) {
-          if (entry.isIntersecting && !isPlaying) {
-            // Set volume to 70% (0.7) and play
-            videoRef.current.volume = 0.7;
-            videoRef.current.play();
-            setIsPlaying(true);
-          } else if (!entry.isIntersecting && isPlaying) {
-            // Pause when out of view
-            videoRef.current.pause();
-            setIsPlaying(false);
-          }
-        }
-      },
-      {
-        threshold: 0.3, // Trigger when 30% of video is visible
-        rootMargin: "0px",
-      }
-    );
+ useEffect(() => {
+  const currentContainer = containerRef.current;
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        // your code
+      }
+    },
+    { threshold: 0.3 }
+  );
+
+  if (currentContainer) {
+    observer.observe(currentContainer);
+  }
+
+  return () => {
+    if (currentContainer) {
+      observer.unobserve(currentContainer);
     }
+  };
 
-    return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
-      }
-    };
   }, [isPlaying]);
 
   return (
