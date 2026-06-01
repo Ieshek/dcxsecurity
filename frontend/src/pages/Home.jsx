@@ -82,21 +82,53 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="mb-6 flex justify-center"
           >
-            <img
-              src="/dcx-logo-white.png"
-              alt="DCX Security Wizards Logo"
-              className="w-[220px] sm:w-[260px] md:w-[320px] lg:w-[360px] h-auto object-contain drop-shadow-[0_0_20px_rgba(0,255,255,0.15)]"
-            />
+            <div
+  className="flex justify-center items-center"
+  style={{
+    filter: "drop-shadow(0 0 20px rgba(0,217,255,0.25))",
+  }}
+>
+  <h1
+    className="text-white font-black tracking-tight"
+    style={{
+      fontSize: "clamp(5rem, 12vw, 10rem)",
+      lineHeight: 1,
+      letterSpacing: "-0.08em",
+    }}
+  >
+    DCX
+  </h1>
+
+  <span
+    className="absolute text-white font-bold leading-none"
+    style={{
+      top: "8%",
+      right: "-8%",
+      fontSize: "clamp(12px, 1.5vw, 24px)",
+    }}
+  >
+    ®
+  </span>
+</div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="uppercase tracking-[0.35em] text-cyan-300 text-sm font-semibold mb-6"
-          >
-            Advanced Security Systems
-          </motion.div>
+  initial={{ opacity: 0, y: 16 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.7, delay: 0.1 }}
+  className="
+    uppercase
+    text-cyan-300
+    text-sm
+    font-semibold
+    mb-6
+    tracking-[0.15em]
+    md:tracking-[0.25em]
+    whitespace-nowrap
+  "
+>
+  Advanced Security Systems
+</motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}

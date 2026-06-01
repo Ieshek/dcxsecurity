@@ -216,36 +216,48 @@ const Splash = () => {
 
             {/* Logo */}
             <motion.div
-              data-testid="splash-logo"
-              initial={{ opacity: 0, scale: 0.4 }}
-              animate={{
-                opacity: 1,
-                scale: 1,
-                y: [0, -6, 0],
-              }}
-              transition={{
-                opacity: { duration: 0.9, ease: [0.16, 1, 0.3, 1] },
-                scale: { duration: 1.1, ease: [0.16, 1, 0.3, 1] },
-                y: {
-                  duration: 3.2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 1,
-                },
-              }}
-              className="relative w-44 h-44 sm:w-52 sm:h-52 grid place-items-center"
-            >
-              <img
-                src={DCX_LOGO_URL}
-                alt="DCX Security Wizards"
-                className="w-full h-full object-contain"
-                style={{
-                  filter:
-                    "invert(1) brightness(1.05) drop-shadow(0 0 24px rgba(0,194,255,0.85)) drop-shadow(0 0 48px rgba(0,194,255,0.55))",
-                }}
-                draggable={false}
-              />
-            </motion.div>
+  data-testid="splash-logo"
+  initial={{ opacity: 0, scale: 0.4 }}
+  animate={{
+    opacity: 1,
+    scale: 1,
+    y: [0, -6, 0],
+  }}
+  transition={{
+    opacity: { duration: 0.9 },
+    scale: { duration: 1.1 },
+    y: {
+      duration: 3.2,
+      repeat: Infinity,
+      ease: "easeInOut",
+      delay: 1,
+    },
+  }}
+  className="relative flex items-center justify-center"
+>
+  <span
+    className="relative text-white font-black leading-none"
+    style={{
+      fontSize: "clamp(6rem, 12vw, 12rem)",
+      letterSpacing: "-0.08em",
+      textShadow:
+        "0 0 20px rgba(0,194,255,0.8), 0 0 50px rgba(0,194,255,0.5)",
+    }}
+  >
+    DCX
+
+    <span
+      className="absolute font-bold"
+      style={{
+        top: "5%",
+        right: "-12%",
+        fontSize: "18%",
+      }}
+    >
+      ®
+    </span>
+  </span>
+</motion.div>
           </div>
 
           {/* Company name */}

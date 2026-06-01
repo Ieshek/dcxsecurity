@@ -46,7 +46,7 @@ export const PRODUCTS = [
   {
     id: "infrared-sensor",
     name: "Infrared Sensor",
-    price: "₹9,949",
+    mrp: 9949, offerPrice: 7750,
     image: PRODUCT_IMG.ir,
     category: "Sensor",
     description:
@@ -56,7 +56,7 @@ export const PRODUCTS = [
   {
     id: "defender100",
     name: "Defender-100",
-    price: "₹33,949",
+    mrp: 33950, offerPrice: 28500,
     image: PRODUCT_IMG.defender100,
     category: "Control",
     description:
@@ -66,7 +66,7 @@ export const PRODUCTS = [
   {
     id: "panic-switch",
     name: "Panic Switch",
-    price: "₹2,450",
+    mrp: 2450, offerPrice: 2050,
     image: PRODUCT_IMG.panic,
     category: "Emergency",
     description: "Emergency switch for immediate alarm activation in critical situations.",
@@ -75,7 +75,7 @@ export const PRODUCTS = [
   {
     id: "defender200",
     name: "Defender-200",
-    price: "₹39,950",
+    mrp: 42950, offerPrice: 36500,
     image: PRODUCT_IMG.defender200,
     category: "Control",
     description:
@@ -85,7 +85,7 @@ export const PRODUCTS = [
   {
     id: "defender300",
     name: "Defender-300",
-    price: "₹49,950",
+    mrp: 49950, offerPrice: 40500,
     image: PRODUCT_IMG.defender300,
     category: "Control",
     description:
@@ -94,8 +94,8 @@ export const PRODUCTS = [
   },
   {
     id: "commercial-defender",
-    name: "Commercial Defender",
-    price: "₹37,950",
+    name: "Commercial Defender Hub",
+    mrp: 37950, offerPrice: 33950,
     image: PRODUCT_IMG.commercialdefender,
     category: "Control",
     description:
@@ -106,7 +106,7 @@ export const PRODUCTS = [
   {
     id: "fire-sensor",
     name: "Fire Sensor",
-    price: "₹6,950",
+    mrp: 6950, offerPrice: 5450,
     image: PRODUCT_IMG.fire,
     category: "Fire Safety",
     description:
@@ -116,7 +116,7 @@ export const PRODUCTS = [
   {
     id: "Smoke & Temperature Sensor",
     name: "Smoke & Temperature Sensor",
-    price: "₹11,950",
+    mrp: 11950, offerPrice: 8550,
     image: PRODUCT_IMG.smoke,
     category: "Fire Safety",
     description:
@@ -127,7 +127,7 @@ export const PRODUCTS = [
   {
     id: "glass-break-sensor",
     name: "Glass Break Sensor",
-    price: "₹6,950",
+    mrp: 6950, offerPrice: 5450,
     image: PRODUCT_IMG.glass,
     category: "Sensor",
     description: "Acoustic glass break detection for windows and showcases with instant alarm trigger.",
@@ -136,7 +136,7 @@ export const PRODUCTS = [
   {
     id: "curtain-sensor",
     name: "Curtain Sensor",
-    price: "₹15,949",
+    mrp: 15949, offerPrice: 12500,
     image: PRODUCT_IMG.curtain,
     category: "Sensor",
     description: "Vertical invisible protection layer for doors, windows, and balconies.",
@@ -145,7 +145,7 @@ export const PRODUCTS = [
   {
     id: "outdoor-ir-sensor",
     name: "Outdoor Infrared Sensor",
-    price: "₹29,950",
+    mrp: 29950, offerPrice: 22550,
     image: PRODUCT_IMG.outdoor,
     category: "Perimeter",
     description: "Weather-proof outdoor perimeter motion detection for gardens and driveways.",
@@ -154,7 +154,7 @@ export const PRODUCTS = [
   {
     id: "shutter-sensor",
     name: "Shutter Sensor",
-    price: "₹6,950",
+    mrp: 6950, offerPrice: 5450,
     image: PRODUCT_IMG.shutter,
     category: "Sensor",
     description: "Heavy-duty protection for shop shutters against tampering and forced entry.",
@@ -163,7 +163,7 @@ export const PRODUCTS = [
   {
     id: "beam-sensor",
     name: "Beam Sensor",
-    price: "₹39,950",
+    mrp: 39950, offerPrice: 30950,
     image: PRODUCT_IMG.beam,
     category: "Perimeter",
     description: "Long-range invisible boundary protection sensor for compound walls and gates.",
@@ -172,7 +172,7 @@ export const PRODUCTS = [
   {
     id: "door-sensor",
     name: "Door Sensor",
-    price: "₹6,950",
+    mrp: 6950, offerPrice: 5950,
     image: PRODUCT_IMG.door,
     category: "Sensor",
     description: "Magnetic contact door opening detection with long battery backup.",
@@ -181,7 +181,7 @@ export const PRODUCTS = [
   {
     id: "Gas-leak-sensor",
     name: "Gas Leak Sensor",
-    price: "₹12,995",
+    mrp: 12995, offerPrice: 8550,
     image: PRODUCT_IMG.gas,
     category: "Sensor",
     description: "Advanced gas leak detection for kitchens and industrial spaces with instant alerts.",
@@ -189,8 +189,8 @@ export const PRODUCTS = [
   },
   {
     id: "siren",
-    name: "Outdoor Siren pro",
-    price: "₹12,950",
+    name: "Outdoor Siren Pro",
+    mrp: 12950, offerPrice: 8950,
     image: PRODUCT_IMG.outdoor_siren_pro,
     category: "Sirens",
     description: "High-decibel siren for immediate attention and alerting. with 24x7 support.",
@@ -199,7 +199,7 @@ export const PRODUCTS = [
   {
     id: "solar-siren",
     name: "Solar Outdoor Siren",
-    price: "₹32,950",
+    mrp: 32950, offerPrice: 24500,
     image: PRODUCT_IMG.solar_outdoor_siren,
     category: "Sirens",
     description: "Eco-friendly solar-powered outdoor siren for continuous alerting.",
@@ -208,13 +208,12 @@ export const PRODUCTS = [
   {
     id: "siren-pro100",
     name: "Outdoor Siren Pro 100",
-    price: "₹12,950",
+    mrp: 12950, offerPrice: 8950,
     image: PRODUCT_IMG.outdoor_siren_pro100,
     category: "Sirens",
     description: "High-decibel siren for immediate attention and alerting. with 24x7 support.",
     features: ["120dB", "Weather proof", "Wireless", "Test function"],
   }
-
 ];
 
 export const SERVICES = [

@@ -24,7 +24,7 @@ export const Footer = () => {
       className="relative mt-32 border-t border-white/5 bg-[#05070C]"
     >
       <div className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent" />
-      <div className="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-5 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.8fr_1fr_1fr_1fr] gap-10">
         <div>
           <Logo />
           <p className="mt-5 text-sm text-slate-400 leading-relaxed max-w-xs">
