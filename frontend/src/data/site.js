@@ -1,5 +1,7 @@
 // Centralized site data for DCX Security Systems
 
+import { id } from "date-fns/locale";
+
 export const COMPANY = {
   name: "DCX Security Wizards",
   short: "DCX",
@@ -28,6 +30,7 @@ const PRODUCT_IMG = {
   defender300: "https://i.postimg.cc/Sx6JyMYv/Whats-App-Image-2026-05-06-at-23-27-16.jpg",
   panic: "https://i.postimg.cc/FKT8cTJ7/Whats-App-Image-2026-05-06-at-23-13-44.jpg",
   commercialdefender: "https://i.postimg.cc/52B6xCQs/Whats-App-Image-2026-05-06-at-23-25-03.jpg",
+  defendersmall: "https://cdn.postimage.me/2026/06/02/WhatsApp-Image-2026-06-02-at-23.04.35.jpeg",
   fire: "https://i.postimg.cc/NfKMrThG/Whats-App-Image-2026-05-03-at-21-00-53.jpg",
   smoke: "https://cdn.postimage.me/2026/05/28/WhatsApp-Image-2026-05-27-at-07.33.30.jpeg",
   glass: "https://i.postimg.cc/HsFL0xdC/Whats-App-Image-2026-05-03-at-21-01-01.jpg",
@@ -75,7 +78,7 @@ export const PRODUCTS = [
   {
     id: "defender200",
     name: "Defender-200",
-    mrp: 42950, offerPrice: 36500,
+    mrp: 34950, offerPrice: 28500,
     image: PRODUCT_IMG.defender200,
     category: "Control",
     description:
@@ -91,6 +94,16 @@ export const PRODUCTS = [
     description:
       "Premium touchscreen smart hub with Away, Stay, Disarm, and SOS modes for whole-home security.",
     features: ["4 mode arming", "Smart automation", "App control", "Voice prompts"],
+  },
+  {
+    id: "defender-4-2",
+    name: "Defender(4.2inch)",
+    mrp: 42950, offerPrice: 36500,
+    image: PRODUCT_IMG.defendersmall,
+    category: "Control",
+    description:
+      "Enterprise-grade security control hub for large commercial spaces with advanced features and scalability.",
+    features: ["Scalable architecture", "Advanced analytics", "Remote monitoring", "Multi-user access"],
   },
   {
     id: "commercial-defender",
@@ -259,6 +272,7 @@ export const STATS = [
   { value: 4500, suffix: "+", label: "Satisfied Clients" },
   { value: 24, suffix: "x7", label: "Support" },
   { value: 20, suffix: "+", label: "Security Products" },
+  { value: 9500, suffix: "+", label: "Onsite Demos" },
 ];
 
 export const CLIENTS = [

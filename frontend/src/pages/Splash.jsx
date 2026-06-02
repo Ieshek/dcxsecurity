@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { motion } from "framer-motion";
 
-const DCX_LOGO_URL = "/dcx-logo-transparent.jpeg";
+const DCX_LOGO_URL = "/dcx-logo.png";
 
 // Pre-computed particle positions (stable across renders)
 const PARTICLES = Array.from({ length: 36 }).map((_, i) => ({
@@ -215,7 +215,7 @@ const Splash = () => {
             />
 
             {/* Logo */}
-            <motion.div
+       <motion.div
   data-testid="splash-logo"
   initial={{ opacity: 0, scale: 0.4 }}
   animate={{
@@ -235,66 +235,32 @@ const Splash = () => {
   }}
   className="relative flex items-center justify-center"
 >
-  <span
-    className="relative text-white font-black leading-none"
+  <img
+    src="/dcx-logo.png"
+    alt="DCX Security Wizards"
+    className="object-contain"
     style={{
-      fontSize: "clamp(6rem, 12vw, 12rem)",
-      letterSpacing: "-0.08em",
-      textShadow:
-        "0 0 20px rgba(0,194,255,0.8), 0 0 50px rgba(0,194,255,0.5)",
+      width: "clamp(480px, 60vw, 975px)",
+      height: "auto",
+      filter:
+        "brightness(0) invert(1) drop-shadow(0 0 20px rgba(0,194,255,0.7)) drop-shadow(0 0 50px rgba(0,194,255,0.4))",
     }}
-  >
-    DCX
-
-    <span
-      className="absolute font-bold"
-      style={{
-        top: "5%",
-        right: "-12%",
-        fontSize: "18%",
-      }}
-    >
-      ®
-    </span>
-  </span>
+  />
 </motion.div>
           </div>
 
-          {/* Company name */}
-          <h1
-            data-testid="splash-name"
-            className="mt-10 text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white"
+          {/* Tagline */}
+          <h2
+            data-testid="splash-tagline"
+            className="mt-8 text-4xl sm:text-6xl lg:text-7xl font-bold text-white uppercase text-center"
             style={{
               fontFamily: "Outfit, sans-serif",
               letterSpacing: "0.18em",
-              textShadow:
-                "0 0 12px rgba(0,194,255,0.55), 0 0 32px rgba(0,194,255,0.35), 0 0 60px rgba(0,194,255,0.25)",
+              textShadow: "0 0 12px rgba(0,194,255,0.5), 0 0 30px rgba(0,194,255,0.3)",
             }}
           >
-            SECURITY WIZARDS
-          </h1>
-
-          {/* Underline */}
-          <div
-            className="mt-4 h-px w-32 sm:w-44 origin-center"
-            style={{
-              background:
-                "linear-gradient(90deg, transparent, #00C2FF, transparent)",
-              boxShadow: "0 0 12px #00C2FF",
-            }}
-          />
-
-          {/* Tagline */}
-          <p
-            data-testid="splash-tagline"
-            className="mt-5 text-sm sm:text-base lg:text-lg text-cyan-100/80 font-medium tracking-[0.22em] uppercase"
-            style={{
-              fontFamily: "Manrope, sans-serif",
-              textShadow: "0 0 10px rgba(0,194,255,0.4)",
-            }}
-          >
-            Here Security Never Sleeps
-          </p>
+            HERE SECURITY NEVER SLEEPS
+          </h2>
 
           {/* Loading bar */}
           <div

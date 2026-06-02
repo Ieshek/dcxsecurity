@@ -160,20 +160,21 @@ export default function Contact() {
             </div>
 
             {/* Map */}
-            <div
-              className="rounded-3xl overflow-hidden border border-white/10 bg-[#0a0d15]"
-              data-testid="contact-map"
-            >
-              <iframe
-                title="DCX office location"
-                src={COMPANY.mapsEmbed}
-                width="100%"
-                height="280"
-                style={{ border: 0, filter: "invert(0.92) hue-rotate(180deg)" }}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
+           <div
+  className="rounded-3xl overflow-hidden border border-white/10 bg-[#0a0d15]"
+  data-testid="contact-map"
+>
+  <iframe
+    title="DCX Security Wizards Location"
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1792.8174918262787!2d78.04093332315212!3d27.20195330920213!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3974a3037f735101%3A0x4e80ca478cfa987a!2sDCX%20Security%20Wizards!5e0!3m2!1sen!2sus!4v1780421459465!5m2!1sen!2sus"
+    width="100%"
+    height="280"
+    style={{ border: 0 }}
+    loading="lazy"
+    allowFullScreen
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+</div>
           </motion.div>
 
           {/* Form */}

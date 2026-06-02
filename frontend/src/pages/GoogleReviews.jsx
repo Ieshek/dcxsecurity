@@ -156,7 +156,7 @@ const AggregateBar = ({ reviews }) => {
 
       {/* Right: CTA */}
       <a
-        href="https://www.google.com/maps/place/DCX+Security+Wizards"
+        href="https://www.google.com/maps/place/DCX+Security+Wizards/@27.201825,78.041412,17z/data=!4m8!3m7!1s0x3974a3037f735101:0x4e80ca478cfa987a!8m2!3d27.201825!4d78.041412!9m1!1b1!16s%2Fg%2F11scbppcf3?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D"
         target="_blank"
         rel="noopener noreferrer"
         className="agg-cta"

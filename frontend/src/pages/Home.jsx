@@ -82,33 +82,21 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="mb-6 flex justify-center"
           >
-            <div
-  className="flex justify-center items-center"
+        <div
+  className="relative overflow-hidden flex justify-center items-center"
   style={{
-    filter: "drop-shadow(0 0 20px rgba(0,217,255,0.25))",
+    width: "650px",
+    height: "185px",
   }}
 >
-  <h1
-    className="text-white font-black tracking-tight"
-    style={{
-      fontSize: "clamp(5rem, 12vw, 10rem)",
-      lineHeight: 1,
-      letterSpacing: "-0.08em",
+  <img
+  src="/dcx-logo.png"
+  alt="DCX Logo"
+ style={{
+      
+      filter: "drop-shadow(0 0 20px rgba(0,217,255,0.25))",
     }}
-  >
-    DCX
-  </h1>
-
-  <span
-    className="absolute text-white font-bold leading-none"
-    style={{
-      top: "8%",
-      right: "-8%",
-      fontSize: "clamp(12px, 1.5vw, 24px)",
-    }}
-  >
-    ®
-  </span>
+  />
 </div>
           </motion.div>
 
