@@ -100,7 +100,7 @@ export default function Home() {
 </div>
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
   initial={{ opacity: 0, y: 16 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.7, delay: 0.1 }}
@@ -116,7 +116,7 @@ export default function Home() {
   "
 >
   Advanced Security Systems
-</motion.div>
+</motion.div> */}
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -125,7 +125,7 @@ export default function Home() {
             className="w-full max-w-[1200px] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.1]"
             style={{ fontFamily: "Outfit, sans-serif" }}
           >
-            Advanced Security Solutions for
+            Advanced Security Systems for
             <br />
             <span className="block text-glow-blue">Homes, Offices &amp; Businesses</span>
           </motion.h1>
