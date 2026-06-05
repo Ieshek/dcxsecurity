@@ -28,8 +28,7 @@ export const Footer = () => {
         <div>
           <Logo />
           <p className="mt-5 text-sm text-slate-400 leading-relaxed max-w-xs">
-            {COMPANY.name}. Premium security products and consultancy for homes,
-            offices, shops, villas and industrial spaces across Agra and beyond.
+             We provides advanced wireless security systems for homes, offices, shops, villas, warehouses, and businesses. Our smart security solutions include intrusion detection, instant mobile alerts, powerful sirens, and 24×7 protection to keep your property safe whether you're away or a sleep.
           </p>
           <div className="mt-6 flex gap-2.5">
             <SocialIcon Icon={Facebook} href="https://www.facebook.com/DCSWIZARDS?rdid=8WKpjArpI8JS0VPe&share_url=https%253A%252F%252Fwww.facebook.com%252Fshare%252F18CqbKX6kx%252F%253Fref%253D1#" label="Facebook" testid="social-facebook" />
