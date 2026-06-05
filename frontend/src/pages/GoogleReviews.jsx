@@ -353,7 +353,9 @@ export default function GoogleReviewsPage() {
                 </p>
               </div>
               <a
-                href="https://www.google.com/maps/place/DCX+Security+Wizards/@27.201825,78.041412,17z"
+                // href="https://maps.app.goo.gl/Ssr1uSEFSGYAPGoC6"
+                // href="https://maps.app.goo.gl/zPwGQ8ZPDwryx5DK9"
+                href="https://www.google.com/maps/dir/?api=1&destination=11/39,+New+Sita+Nagar,+Rambagh,+Agra,+Uttar+Pradesh+282006"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="gr-cta-btn"

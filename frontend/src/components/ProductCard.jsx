@@ -24,11 +24,11 @@ export const ProductCard = ({ product, onEnquire }) => {
         <span className="absolute top-4 left-4 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest bg-cyan-400/10 text-cyan-300 border border-cyan-400/30 backdrop-blur-md">
           {product.category}
         </span>
-        {product.mrp && product.offerPrice && product.mrp > product.offerPrice && (
-          <span className="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold text-white bg-red-500/80 border border-red-400/30 backdrop-blur-md">
-            SAVE ₹{(product.mrp - product.offerPrice).toLocaleString()}
-          </span>
-        )}
+        {/* {product.mrp && product.offerPrice && product.mrp > product.offerPrice && (
+          // <span className="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold text-white bg-red-500/80 border border-red-400/30 backdrop-blur-md">
+          //   SAVE ₹{(product.mrp - product.offerPrice).toLocaleString()}
+          // </span>
+        )} */}
       </div>
       <div className="p-6 flex flex-col gap-4 flex-1">
         <div>
