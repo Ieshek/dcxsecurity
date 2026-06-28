@@ -63,11 +63,11 @@ async def root():
 
 # Video serving endpoints (serve files from backend/videos directory)
 VIDEOS_DIR = ROOT_DIR / "videos"
-VIDEO1_PATH = VIDEOS_DIR / "review1.mp4"
+VIDEO1_PATH = VIDEOS_DIR / "review1-compressed.mp4"
 VIDEO2_PATH = VIDEOS_DIR / "review2.mp4"
 
 
-@app.get("/videos/review1")
+@app.get("/videos/review1-compressed")
 async def video_review1():
     """Serve the first review video file"""
     if VIDEO1_PATH.exists():

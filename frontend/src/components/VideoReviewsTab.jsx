@@ -14,7 +14,7 @@ const VideoReviewsTab = () => {
       id: 1,
       title: "Review of DCX Security Installation",
       description: "Security system in action",
-      src: ensureMp4("review1.mp4"),
+      src: ensureMp4("review1-compressed.mp4"),
     },
     {
       id: 2,
