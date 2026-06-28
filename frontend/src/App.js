@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "@/App.css";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import Navbar from "@/components/Navbar";
@@ -18,6 +18,16 @@ import GoogleReviews from "@/pages/GoogleReviews";
 
 function AnimatedRoutes() {
   const location = useLocation();
+  const navigate = useNavigate();
+  const initialPath = useRef(window.location.pathname);
+
+  useEffect(() => {
+    const isInitialLoad = initialPath.current === window.location.pathname;
+    if (isInitialLoad && window.location.pathname !== "/") {
+      navigate("/", { replace: true });
+    }
+  }, [navigate]);
+
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>

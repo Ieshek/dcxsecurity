@@ -82,17 +82,23 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="mb-6 flex justify-center"
           >
-        <div
-  className="relative overflow-hidden flex justify-center items-center"
-  style={{
-    width: "650px",
-    height: "185px",
-  }}
+   <div
+  className="
+    relative
+    overflow-hidden
+    flex
+    justify-center
+    items-center
+    w-full
+    max-w-[650px]
+    h-auto
+  "
 >
   <img
   src="/dcx-logo.png"
   alt="DCX Logo"
- style={{
+  className="w-full h-auto object-contain"
+  style={{
       
       filter: "drop-shadow(0 0 20px rgba(0,217,255,0.25))",
     }}
@@ -447,8 +453,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-
+      </section>             
       <EnquiryDialog
         open={enq.open}
         onOpenChange={(o) => setEnq({ ...enq, open: o })}

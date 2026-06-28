@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import PageWrapper from "../components/PageWrapper";
+import VideoReviewsTab from "../components/VideoReviewsTab";
 import reviewsData from "../data/reviews.json";
 
 // ─── Google colour palette ────────────────────────────────────────────────────
@@ -657,6 +658,9 @@ export default function GoogleReviewsPage() {
           box-shadow: 0 8px 32px rgba(66,133,244,0.5);
         }
       `}</style>
+
+      {/* ── Video Reviews Section ── */}
+      <VideoReviewsTab />
     </PageWrapper>
   );
 }

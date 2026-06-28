@@ -4,6 +4,7 @@ from starlette.middleware.cors import CORSMiddleware
 import os
 import logging
 from pathlib import Path
+from fastapi.responses import FileResponse
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
@@ -58,6 +59,28 @@ async def root():
         "docs": "/docs",
         "redoc": "/redoc"
     }
+
+
+# Video serving endpoints (serve files from backend/videos directory)
+VIDEOS_DIR = ROOT_DIR / "videos"
+VIDEO1_PATH = VIDEOS_DIR / "review1.mp4"
+VIDEO2_PATH = VIDEOS_DIR / "review2.mp4"
+
+
+@app.get("/videos/review1")
+async def video_review1():
+    """Serve the first review video file"""
+    if VIDEO1_PATH.exists():
+        return FileResponse(str(VIDEO1_PATH), media_type="video/mp4", filename=VIDEO1_PATH.name)
+    return {"error": "video file not found", "path": str(VIDEO1_PATH)}
+
+
+@app.get("/videos/review2")
+async def video_review2():
+    """Serve the second review video file"""
+    if VIDEO2_PATH.exists():
+        return FileResponse(str(VIDEO2_PATH), media_type="video/mp4", filename=VIDEO2_PATH.name)
+    return {"error": "video file not found", "path": str(VIDEO2_PATH)}
 
 
 if __name__ == "__main__":
