@@ -87,24 +87,55 @@ export default function Contact() {
                 {COMPANY.name}
               </h2>
               <div className="space-y-4">
-                <div className="flex gap-3">
-                  <MapPin size={18} className="shrink-0 text-cyan-300 mt-0.5" />
-                  <div>
-                    <div className="text-xs uppercase tracking-widest text-slate-500 font-semibold">Address</div>
-                    <div className="text-white text-sm mt-0.5">{COMPANY.address}</div>
+                <div className="mb-2 pb-4 border-b border-white/5">
+                  <div className="text-cyan-300 text-[10px] font-bold uppercase tracking-widest mb-3">Head Office (Agra)</div>
+                  <div className="space-y-4">
+                    <div className="flex gap-3">
+                      <MapPin size={18} className="shrink-0 text-cyan-300 mt-0.5" />
+                      <div>
+                        <div className="text-xs uppercase tracking-widest text-slate-500 font-semibold">Address</div>
+                        <div className="text-white text-sm mt-0.5">{COMPANY.address}</div>
+                      </div>
+                    </div>
+                    <div className="flex gap-3">
+                      <Phone size={18} className="shrink-0 text-cyan-300 mt-0.5" />
+                      <div>
+                        <div className="text-xs uppercase tracking-widest text-slate-500 font-semibold">Phone</div>
+                        <a
+                          href={`tel:${COMPANY.phoneDial}`}
+                          className="text-white text-sm mt-0.5 hover:text-cyan-300"
+                          data-testid="contact-phone-link-head"
+                        >
+                          {COMPANY.phone}
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div className="flex gap-3">
-                  <Phone size={18} className="shrink-0 text-cyan-300 mt-0.5" />
-                  <div>
-                    <div className="text-xs uppercase tracking-widest text-slate-500 font-semibold">Phone</div>
-                    <a
-                      href={`tel:${COMPANY.phoneDial}`}
-                      className="text-white text-sm mt-0.5 hover:text-cyan-300"
-                      data-testid="contact-phone-link"
-                    >
-                      {COMPANY.phone}
-                    </a>
+
+                <div className="mb-2 pb-4 border-b border-white/5">
+                  <div className="text-cyan-300 text-[10px] font-bold uppercase tracking-widest mb-3">Delhi Office</div>
+                  <div className="space-y-4">
+                    <div className="flex gap-3">
+                      <MapPin size={18} className="shrink-0 text-cyan-300 mt-0.5" />
+                      <div>
+                        <div className="text-xs uppercase tracking-widest text-slate-500 font-semibold">Address</div>
+                        <div className="text-white text-sm mt-0.5">{COMPANY.delhiAddress}</div>
+                      </div>
+                    </div>
+                    <div className="flex gap-3">
+                      <Phone size={18} className="shrink-0 text-cyan-300 mt-0.5" />
+                      <div>
+                        <div className="text-xs uppercase tracking-widest text-slate-500 font-semibold">Phone</div>
+                        <a
+                          href={`tel:${COMPANY.delhiPhoneDial}`}
+                          className="text-white text-sm mt-0.5 hover:text-cyan-300"
+                          data-testid="contact-phone-link-delhi"
+                        >
+                          {COMPANY.delhiPhone}
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className="flex gap-3">
@@ -160,21 +191,45 @@ export default function Contact() {
             </div>
 
             {/* Map */}
-           <div
-  className="rounded-3xl overflow-hidden border border-white/10 bg-[#0a0d15]"
-  data-testid="contact-map"
->
-  <iframe
-    title="DCX Security Wizards Location"
-    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1792.8174918262787!2d78.04093332315212!3d27.20195330920213!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3974a3037f735101%3A0x4e80ca478cfa987a!2sDCX%20Security%20Wizards!5e0!3m2!1sen!2sus!4v1780421459465!5m2!1sen!2sus"
-    width="100%"
-    height="280"
-    style={{ border: 0 }}
-    loading="lazy"
-    allowFullScreen
-    referrerPolicy="no-referrer-when-downgrade"
-  />
-</div>
+           <div className="space-y-4">
+             <div
+               className="rounded-3xl overflow-hidden border border-white/10 bg-[#0a0d15]"
+               data-testid="contact-map-head"
+             >
+               <div className="bg-[#05070C] text-slate-400 text-[10px] uppercase tracking-widest font-semibold py-2 px-4 border-b border-white/10">
+                 Head Office Map
+               </div>
+               <iframe
+                 title="DCX Security Wizards Head Office"
+                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1792.8174918262787!2d78.04093332315212!3d27.20195330920213!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3974a3037f735101%3A0x4e80ca478cfa987a!2sDCX%20Security%20Wizards!5e0!3m2!1sen!2sus!4v1780421459465!5m2!1sen!2sus"
+                 width="100%"
+                 height="220"
+                 style={{ border: 0 }}
+                 loading="lazy"
+                 allowFullScreen
+                 referrerPolicy="no-referrer-when-downgrade"
+               />
+             </div>
+
+             <div
+               className="rounded-3xl overflow-hidden border border-white/10 bg-[#0a0d15]"
+               data-testid="contact-map-delhi"
+             >
+               <div className="bg-[#05070C] text-slate-400 text-[10px] uppercase tracking-widest font-semibold py-2 px-4 border-b border-white/10">
+                 Delhi Office Map
+               </div>
+               <iframe
+                 title="DCX Security Wizards Delhi Office"
+                 src="https://www.google.com/maps?q=Padam+Singh+Rd,+Karol+Bagh,+Delhi,+110005&output=embed"
+                 width="100%"
+                 height="220"
+                 style={{ border: 0 }}
+                 loading="lazy"
+                 allowFullScreen
+                 referrerPolicy="no-referrer-when-downgrade"
+               />
+             </div>
+           </div>
           </motion.div>
 
           {/* Form */}

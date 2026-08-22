@@ -6,19 +6,23 @@ export const COMPANY = {
   name: "DCX Security Wizards",
   short: "DCX",
   tagline: "Advanced Security Solutions for Homes, Offices & Businesses",
-  phone: ["09971795961", ],
-  phoneDial: ["+919971795961"," , ", "+919899096699"],
-  whatsapp: ["919971795961", ],
+  phone: "09971795961",
+  phoneDial: "+919971795961",
+  delhiPhone: "9899096699",
+  delhiPhoneDial: "+919899096699",
+  whatsapp: "919971795961",
   instagram: "dcxsecuritywizards",
   instagramUrl: "https://www.instagram.com/dcxsecuritywizards",
-  address:
-    "11/39, New Sita Nagar, Sita Nagar, Rambagh, Agra, Uttar Pradesh 282006",
+  address: "11/39, New Sita Nagar, Sita Nagar, Rambagh, Agra, Uttar Pradesh 282006",
+  delhiAddress: "Anand Parbat, Padam Singh Road, Karol Bagh, Delhi – 110005",
   hours: "Open 24 Hours",
   email: "dcxwizards@gmail.com",
   mapsEmbed:
     "https://www.google.com/maps?q=Sita+Nagar+Rambagh+Agra+Uttar+Pradesh+282006&output=embed",
   mapsDirections:
     "https://www.google.com/maps/dir/?api=1&destination=11/39,+New+Sita+Nagar,+Rambagh,+Agra,+Uttar+Pradesh+282006",
+  delhiMapsDirections:
+    "https://www.google.com/maps/dir/?api=1&destination=Anand+Parbat,+Padam+Singh+Road,+Karol+Bagh,+Delhi+110005",
 };
 
 // Use a generic placeholder image strategy: each product gets a unique seed.
@@ -32,7 +36,7 @@ const PRODUCT_IMG = {
   commercialdefender: "https://i.postimg.cc/52B6xCQs/Whats-App-Image-2026-05-06-at-23-25-03.jpg",
   defendersmall: "https://cdn.postimage.me/2026/06/02/WhatsApp-Image-2026-06-02-at-23.04.35.jpeg",
   fire: "https://i.postimg.cc/NfKMrThG/Whats-App-Image-2026-05-03-at-21-00-53.jpg",
-  smoke: "https://cdn.postimage.me/2026/05/28/WhatsApp-Image-2026-05-27-at-07.33.30.jpeg",
+  smoke: "https://cdn.postimage.me/2026/08/22/WhatsApp-Image-2026-05-27-at-07.33.30.jpeg",
   glass: "https://i.postimg.cc/HsFL0xdC/Whats-App-Image-2026-05-03-at-21-01-01.jpg",
   curtain: "https://i.postimg.cc/L8f8xp6w/Whats-App-Image-2026-05-03-at-21-01-02.jpg",
   outdoor: "https://i.postimg.cc/hPNG8jcW/Whats-App-Image-2026-05-03-at-21-01-01-(2).jpg",
@@ -40,9 +44,9 @@ const PRODUCT_IMG = {
   beam: "https://i.postimg.cc/RZfZgBZ5/Whats-App-Image-2026-05-03-at-21-01-03.jpg",
   door: "https://i.postimg.cc/28g5d6ms/Whats-App-Image-2026-05-03-at-21-01-02-(1).jpg",
   gas: "https://i.postimg.cc/wBwZJwsy/Whats-App-Image-2026-05-06-at-22-47-26.jpg",
-  outdoor_siren_pro: "https://cdn.postimage.me/2026/05/28/WhatsApp-Image-2026-05-28-at-09.20.55.jpeg",
-  solar_outdoor_siren: "https://cdn.postimage.me/2026/05/28/WhatsApp-Image-2026-05-28-at-09.20.58.jpeg",
-  outdoor_siren_pro100: "https://cdn.postimage.me/2026/05/28/WhatsApp-Image-2026-05-28-at-09.20.56.jpeg",
+  outdoor_siren_pro: "https://cdn.postimage.me/2026/08/22/WhatsApp-Image-2026-05-28-at-09.20.55.jpeg",
+  solar_outdoor_siren: "https://cdn.postimage.me/2026/08/22/WhatsApp-Image-2026-05-28-at-09.20.56.jpeg",
+  outdoor_siren_pro100: "https://cdn.postimage.me/2026/08/22/WhatsApp-Image-2026-05-28-at-09.20.58.jpeg",
 };
 
 export const PRODUCTS = [
@@ -323,25 +327,25 @@ export const INSTALLATIONS = [
     image: "https://i.postimg.cc/3wsfv7rk/Whats-App-Image-2026-05-10-at-22-46-16.jpg",
     title: "Installed at BharatGas ",
     location: "Sadabad",
-    
+
   },
   {
     image: "https://i.postimg.cc/hGkZdg4n/Whats-App-Image-2026-05-10-at-22-46-16-(1).jpg",
     title: "Installed at Marutyi Suzuki Showroom",
     location: "Aligarh",
-    
+
   },
   {
     image: "https://i.postimg.cc/wBC4mHxq/Whats-App-Image-2026-05-10-at-22-47-09-(1).jpg",
     title: "Installed at Stock Holding Corporation Of India Ltd",
     location: "Agra",
-    
+
   },
   {
     image: "https://i.postimg.cc/XvR1C3Np/Whats-App-Image-2026-05-10-at-22-47-09.jpg",
     title: "Installed at Gramin Bank Of Aryavart",
     location: "Firozabad",
-    
+
   },
   {
     image: "https://cdn.postimage.me/2026/05/28/WhatsApp-Image-2026-05-24-at-23.12.19.jpeg",
@@ -375,12 +379,12 @@ export const INSTALLATIONS = [
   },
   {
     image: "https://cdn.postimage.me/2026/05/30/WhatsApp-Image-2026-05-30-at-22.45.16.jpeg",
-    title: "Installed at Residential Villa", 
+    title: "Installed at Residential Villa",
     location: "Meerut",
   },
   {
     image: "https://cdn.postimage.me/2026/05/30/WhatsApp-Image-2026-05-30-at-22.29.33.jpeg",
-    title: "Installed at Ashutosh parashar Jewellers", 
+    title: "Installed at Ashutosh parashar Jewellers",
     location: "Firozabad",
   },
   {

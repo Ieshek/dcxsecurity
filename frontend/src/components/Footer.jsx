@@ -92,17 +92,36 @@ export const Footer = () => {
           <ul className="space-y-3">
             <li className="flex gap-3 text-sm text-slate-400">
               <MapPin size={16} className="shrink-0 text-cyan-300 mt-0.5" />
-              <span data-testid="footer-address">{COMPANY.address}</span>
+              <div className="space-y-1">
+                <span data-testid="footer-address-head" className="block text-xs text-slate-500 font-bold uppercase tracking-widest">Head Office</span>
+                <span className="block">{COMPANY.address}</span>
+              </div>
             </li>
-            <li className="flex gap-3 text-sm text-slate-400">
+            <li className="flex gap-3 text-sm text-slate-400 mt-3">
+              <MapPin size={16} className="shrink-0 text-cyan-300 mt-0.5" />
+              <div className="space-y-1">
+                <span data-testid="footer-address-delhi" className="block text-xs text-slate-500 font-bold uppercase tracking-widest">Delhi Office</span>
+                <span className="block">{COMPANY.delhiAddress}</span>
+              </div>
+            </li>
+            <li className="flex gap-3 text-sm text-slate-400 mt-4">
               <Phone size={16} className="shrink-0 text-cyan-300" />
-              <a
-                href={`tel:${COMPANY.phoneDial}`}
-                data-testid="footer-phone"
-                className="hover:text-cyan-300"
-              >
-                {COMPANY.phone}
-              </a>
+              <div className="flex flex-col space-y-1">
+                <a
+                  href={`tel:${COMPANY.phoneDial}`}
+                  data-testid="footer-phone-head"
+                  className="hover:text-cyan-300"
+                >
+                  {COMPANY.phone} (Head Office)
+                </a>
+                <a
+                  href={`tel:${COMPANY.delhiPhoneDial}`}
+                  data-testid="footer-phone-delhi"
+                  className="hover:text-cyan-300"
+                >
+                  {COMPANY.delhiPhone} (Delhi Office)
+                </a>
+              </div>
             </li>
             <li className="flex gap-3 text-sm text-slate-400">
               <Clock size={16} className="shrink-0 text-cyan-300" />
